@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Proxy /api/* to your deployed API server.
+# Update this URL when you deploy your own backend.
+[[redirects]]
+  from = "/api/*"
+  to = "https://f9d7b2f8-aa1b-439e-8c64-4a79fa4a5d9e-00-3t989ose3bkkp.picard.replit.dev/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback — all routes served by index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
