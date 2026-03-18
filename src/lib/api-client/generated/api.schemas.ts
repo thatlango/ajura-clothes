@@ -227,6 +227,31 @@ export interface FeatureDesignRequest {
   featured: boolean;
 }
 
+export type AdminAnalyticsRevenueAndOrdersItem = {
+  /** Month in YYYY-MM format */
+  month: string;
+  orderCount: number;
+  revenue: number;
+};
+
+export type AdminAnalyticsTailorRegistrationsItem = {
+  /** Month in YYYY-MM format */
+  month: string;
+  tailorCount: number;
+};
+
+export type AdminAnalyticsDesignViewsItem = {
+  /** Month in YYYY-MM format */
+  month: string;
+  viewCount: number;
+};
+
+export interface AdminAnalytics {
+  revenueAndOrders: AdminAnalyticsRevenueAndOrdersItem[];
+  tailorRegistrations: AdminAnalyticsTailorRegistrationsItem[];
+  designViews: AdminAnalyticsDesignViewsItem[];
+}
+
 export type ListTailorsParams = {
   search?: string;
   speciality?: string;

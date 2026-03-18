@@ -16,7 +16,7 @@ export function AjuraFit() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/ajurafit-placeholder.jpg`}
+                  src={`${import.meta.env.BASE_URL}images/ajurafit-placeholder.png`}
                   alt="AjuraFit tailored garment"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />

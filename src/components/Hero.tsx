@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`}
+          src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
           alt="Earthy African pattern background"
           className="w-full h-full object-cover"
         />

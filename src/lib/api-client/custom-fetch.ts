@@ -2,6 +2,21 @@ export type CustomFetchOptions = RequestInit & {
   responseType?: "json" | "text" | "blob" | "auto";
 };
 
+let _apiBaseUrl = "";
+
+/**
+ * Configure the base URL prepended to all relative API requests.
+ * Call this once at application startup (e.g. before rendering the app).
+ * Example: setApiBaseUrl(import.meta.env.VITE_API_URL ?? "")
+ */
+export function setApiBaseUrl(baseUrl: string): void {
+  _apiBaseUrl = baseUrl.replace(/\/$/, "");
+}
+
+export function getApiBaseUrl(): string {
+  return _apiBaseUrl;
+}
+
 export type ErrorType<T = unknown> = ApiError<T>;
 
 export type BodyType<T> = T;
@@ -281,6 +296,14 @@ export async function customFetch<T = unknown>(
 
   if (init.body != null && (method === "GET" || method === "HEAD")) {
     throw new TypeError(`customFetch: ${method} requests cannot have a body.`);
+  }
+
+  // Prepend the configured base URL to relative paths (e.g. "/api/...")
+  if (_apiBaseUrl) {
+    const rawUrl = resolveUrl(input);
+    if (rawUrl.startsWith("/")) {
+      input = _apiBaseUrl + rawUrl;
+    }
   }
 
   const headers = mergeHeaders(isRequest(input) ? input.headers : undefined, headersInit);
