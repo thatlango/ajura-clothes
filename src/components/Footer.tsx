@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-3 text-white/80">
-              <li>Nairobi, Kenya</li>
+              <li>Elephante Commons, Plot 75,<br />Jomo Kenyatta Road, Gulu</li>
               <li>
                 <a href="mailto:info@ajuraclothes.com" className="hover:text-white transition-colors">
                   info@ajuraclothes.com
