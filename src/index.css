@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'DM Sans', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Playfair Display', serif;
 
   --color-background: hsl(var(--background));
@@ -13,10 +13,10 @@
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
+
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
+
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
 
@@ -28,33 +28,34 @@
 }
 
 :root {
-  /* Cream #F5F5DC -> 60 56% 91% */
-  --background: 60 56% 91%;
-  /* Charcoal #333333 -> 0 0% 20% */
-  --foreground: 0 0% 20%;
-  
-  /* Terracotta #C86B3C -> 22 57% 51% */
-  --primary: 22 57% 51%;
-  --primary-foreground: 0 0% 100%;
-  
-  /* Deep Forest Green #2C5F2D -> 121 36% 27% */
-  --secondary: 121 36% 27%;
-  --secondary-foreground: 0 0% 100%;
-  
-  /* Gold #D4AF37 -> 46 63% 52% */
-  --accent: 46 63% 52%;
-  --accent-foreground: 0 0% 20%;
-  
-  --muted: 60 30% 85%;
-  --muted-foreground: 0 0% 40%;
-  
-  --border: 60 20% 80%;
-  --input: 60 20% 80%;
-  --ring: 22 57% 51%;
-  
-  /* Slightly lighter cream/white for cards */
-  --card: 60 60% 96%;
-  --card-foreground: 0 0% 20%;
+  /* Background: #FDFDFD */
+  --background: 0 0% 99%;
+  /* Foreground: #1A1A1A */
+  --foreground: 0 0% 10%;
+
+  /* Primary: #09611E (Deep Green) */
+  --primary: 133 82% 21%;
+  --primary-foreground: 0 0% 99%;
+
+  /* Secondary: #4A725E (Medium Green) */
+  --secondary: 154 21% 37%;
+  --secondary-foreground: 0 0% 99%;
+
+  /* Accent: #0FA958 (Accent Green) */
+  --accent: 148 83% 36%;
+  --accent-foreground: 0 0% 99%;
+
+  /* Muted: #D9DAD9 */
+  --muted: 120 1% 85%;
+  --muted-foreground: 155 7% 40%;
+
+  --border: 120 1% 88%;
+  --input: 120 1% 88%;
+  --ring: 133 82% 21%;
+
+  /* Card: slightly off-white */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
 
   --radius: 0.75rem;
 }
